@@ -4,6 +4,9 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :username
       t.string :email
       t.string :password_digest
+      t.references :pet
     end
+
+    add_index :pet
   end
 end

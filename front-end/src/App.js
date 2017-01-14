@@ -24,8 +24,12 @@ class App extends Component {
   setCurrentPet = (pet) => {
     this.setState({
       showPet: true,
-      pet: pet
+      pet: pet,
     })
+  }
+
+  closeProfileCard = () => {
+    this.setState({showPet: false,})
   }
 
   render() {

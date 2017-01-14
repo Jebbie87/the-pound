@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 
 class ProfilePic extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   getPetData = () => {
     this.props.setPet(this.props.pet)
@@ -11,7 +8,7 @@ class ProfilePic extends Component {
 
   render() {
     return (
-      <img className="profile-pic" src={this.props.pet} onClick={this.getPetData}/>
+      <img role="presentation" className="profile-pic" src={this.props.pet} onClick={this.getPetData}/>
     )
   }
 }

@@ -14,7 +14,7 @@ module ThePound
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'localhost:3002'
         resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
       end
     end

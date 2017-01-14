@@ -107,7 +107,7 @@ Pet.create!({
   breed: "Bullshit",
   age: 3,
   description: "A wily little scamp with a love for sniffing butts",
-  user_id: u1.id
+  user_id: u1.id,
   profile_picture: "https://s3.amazonaws.com/pet-uploads.adoptapet.com/8/6/e/61500157.jpg"
   })
 
@@ -117,7 +117,7 @@ Pet.create!({
   breed: "Persian",
   age: 8,
   description: "A most majestic military commander who has served their country with distinction",
-  user_id: u2.id
+  user_id: u2.id,
   profile_picture: "http://www.catbreedslist.com/uploads/allimg/cat-pictures/Persian-Cat-2.jpg"
   })
 

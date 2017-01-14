@@ -1,0 +1,6 @@
+framework module Pods_The_Pound {
+  umbrella header "Pods-The Pound-umbrella.h"
+
+  export *
+  module * { export * }
+}

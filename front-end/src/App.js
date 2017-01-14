@@ -31,6 +31,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
           <h2>Welcome to The Pound</h2>
+          <p>Because if you can't love my pet, you don't stand a chance with me!</p>
         </div>
 
         <div className="App-body">

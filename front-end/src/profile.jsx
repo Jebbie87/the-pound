@@ -10,11 +10,10 @@ class Profile extends Component {
 
         <h2> {this.props.pet.name} </h2>
         <p> <strong>Type:</strong> {this.props.pet.pet_type}</p>
-        <p><strong>Age:</strong> {this.props.pet.age}</p>
+        <p> <strong>Age:</strong> {this.props.pet.age}</p>
         <p> <strong>Introduction:</strong> {this.props.pet.description} </p>
 
       </div>
-
 
     )
   }

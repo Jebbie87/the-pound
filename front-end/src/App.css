@@ -17,8 +17,6 @@
 
 .App-body {
   /*font-size: large;*/
-  /*display: flex;*/
-
 }
 
 /*change this to make it spin faster on hover*/
@@ -35,14 +33,26 @@
   border-radius: 20px;
   margin: 2em;
   background: rgb(181, 250, 221);
+  font-size: 200%
 }
 
 .profile-pic{
   margin: 1em;
   width: 14em;
   height: 14em;
-  border: 1px solid black;
+  border: 1px solid grey;
   border-radius: 5px;
+}
+
+.pics-container{
+  /*position: absolute;*/
+  padding: 2em;
+  display: flex;
+  height: 15em;
+  width: 80em;
+  overflow-x: scroll;
+  border: 1px solid black;
+  margin:
 }
 
 .profile-pic-big{

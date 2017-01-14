@@ -34,22 +34,23 @@ class App extends Component {
         </div>
 
         <div className="App-body">
-
-          {/* This gets all the pets */}
-          {this.state.pets.map((pet, index) => {
-            return (<ProfilePic
-            pet={pet}
-            setPet={this.setCurrentPet}
-            />)
+          <div className="pics-container">
+            {/* This gets all the pets */}
+            {this.state.pets.map((pet, index) => {
+              return (
+                <ProfilePic
+                  pet={pet}
+                  setPet={this.setCurrentPet}
+                  key={index}  
+                />)
             })
-          }
-
+            }
+          </div>
+        </div>
           {/* Individual profiles you get from clicking on them */}
           <Profile
             pet={this.state.pet}
           />
-
-        </div>
       </div>
     );
   }

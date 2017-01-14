@@ -14,7 +14,6 @@ class App extends Component {
 
   componentWillMount() {
     axios.get('http://0.0.0.0:3000/pets').then((response) => {
-      console.log(response);
       this.setState({pets: response.data})
     }).catch((error) => {
       console.log(error)
@@ -22,7 +21,14 @@ class App extends Component {
   }
 
   setCurrentPet = (pet) => {
-    this.setState({pet: pet})
+    this.setState({
+      showPet: true,
+      pet: pet,
+    })
+  }
+
+  closeProfileCard = () => {
+    this.setState({showPet: false,})
   }
 
   render() {
@@ -52,11 +58,7 @@ class App extends Component {
           </div>
         </div>
           {/* Individual profiles you get from clicking on them */}
-        <div className="hidden">
-          <Profile
-            pet={this.state.pet}
-          />
-        </div>
+          {this.state.showPet ? <Profile pet={this.state.pet} close={this.closeProfileCard}/> : null}
       </div>
     );
   }

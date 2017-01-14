@@ -1474,3 +1474,188 @@ FOREIGN KEY ("pet_id")
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sonic"], ["pet_type", "Tortoise"], ["breed", "Leopard"], ["age", 18], ["description", "A hard outer shell, with a soft gooey centre..."], ["user_id", 11], ["profile_picture", "https://i.ytimg.com/vi/BZnHsj3Y0Fk/maxresdefault.jpg"]]
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "the_pound_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "the_pound_test"[0m
+  [1m[35m (364.0ms)[0m  [1m[35mCREATE DATABASE "the_pound_development" ENCODING = 'utf8'[0m
+  [1m[35m (280.1ms)[0m  [1m[35mCREATE DATABASE "the_pound_test" ENCODING = 'utf8'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "pets" ("id" serial primary key, "name" character varying, "pet_type" character varying, "breed" character varying, "age" integer, "description" text, "user_id" integer, "profile_picture" character varying)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_pets_on_user_id" ON "pets" USING btree ("user_id")[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "pet_id" integer, "gender" character varying)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_pet_id" ON "users" USING btree ("pet_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_f3954f5069"
+FOREIGN KEY ("pet_id")
+  REFERENCES "pets" ("id")
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20170114201223')[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES
+('20170114174457'),
+('20170114175700'),
+('20170114185445'),
+('20170114190338');
+
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-14 20:31:19 UTC], ["updated_at", 2017-01-14 20:31:19 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "pets" ("id" serial primary key, "name" character varying, "pet_type" character varying, "breed" character varying, "age" integer, "description" text, "user_id" integer, "profile_picture" character varying)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_pets_on_user_id" ON "pets" USING btree ("user_id")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "pet_id" integer, "gender" character varying)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_pet_id" ON "users" USING btree ("pet_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_f3954f5069"
+FOREIGN KEY ("pet_id")
+  REFERENCES "pets" ("id")
+[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20170114201223')[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES
+('20170114174457'),
+('20170114175700'),
+('20170114185445'),
+('20170114190338');
+
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-14 20:31:19 UTC], ["updated_at", 2017-01-14 20:31:19 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "DogLuva"], ["email", "dog@luva.com"], ["password_digest", "$2a$10$4BcAuVQxRh8QZHc51fBfLuVDcB05k/T4LHqCL1F5qWIUlsg26w/yW"], ["gender", "male"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "CatLuva"], ["email", "cat@luva.com"], ["password_digest", "$2a$10$iPHTFYPSH6FBUUKrh6JBYuArBeAejsvthqYyVpfrADzfz/190itYO"], ["gender", "female"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "IguanaLuva"], ["email", "iguana@luva.com"], ["password_digest", "$2a$10$uCdDTzu2D2BHMnJ3Rsi5eejcGNz2mGDhN1Wy1WVy6IFjtflcNXINm"], ["gender", "male"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "pickUpPoop"], ["email", "responsibleowner@dog.com"], ["password_digest", "$2a$10$fMk5fKlzNTgPXJ3Hh2OE.Oj1wQi9xd0lPMqKyvjBua.KTT/EnA6Se"], ["gender", "female"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "kittyLitter"], ["email", "catbox@litter.com"], ["password_digest", "$2a$10$Kb1.lXKgC7xfjnO6B55fE.6CL6j/DR3grRZyYvjk9nlQ73eaYBhS."], ["gender", "male"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "HootOot"], ["email", "bigeyes@owl.com"], ["password_digest", "$2a$10$tMsqjndpvxRbZrn0ZUKOZux/3jiqklhmDOpg1fLU8ZpkIpso.Vdkq"], ["gender", "male"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "LlamaLloveMme"], ["email", "spittake@llama.com"], ["password_digest", "$2a$10$naEGWz6ojPgRqaqGyaSEh.8hnDe3GzGSDfdWBG19fJoZyDCXfZ.lK"], ["gender", "female"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Tarantulino"], ["email", "tarantulino@8eyes.com"], ["password_digest", "$2a$10$1Rs7Hx9E8X58.kDHK3sW0u3pb.oKm7wBD/T63UjGq/nMpTOBspEze"], ["gender", "female"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "SnippedDogg"], ["email", "d-o-double-g@snipp.com"], ["password_digest", "$2a$10$oD2l5p954xpMdmKMwcXX/OOdAebrWV2.LsfxHk1yo84/kSKMcJEVO"], ["gender", "male"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "SlowToBegin"], ["email", "slother@merp.com"], ["password_digest", "$2a$10$P6keEk7uPitBR/123/iUSe4dDP0sIf5u24OJJIuexe22NkjQ.z5zu"], ["gender", "male"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "gender") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Shellover"], ["email", "tortle@shell.com"], ["password_digest", "$2a$10$skAnTW9b70VuG2Rn9CJjBea7a5IjxghoYRr3kfI5Bff.gWNvHHdlO"], ["gender", "female"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Reginald"], ["pet_type", "Dog"], ["breed", "Bullshit"], ["age", 3], ["description", "A wily little scamp with a love for sniffing butts"], ["user_id", 1], ["profile_picture", "https://s3.amazonaws.com/pet-uploads.adoptapet.com/8/6/e/61500157.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Colonel Buttons III, Esquire"], ["pet_type", "Cat"], ["breed", "Persian"], ["age", 8], ["description", "A most majestic military commander who has served their country with distinction"], ["user_id", 2], ["profile_picture", "http://www.catbreedslist.com/uploads/allimg/cat-pictures/Persian-Cat-2.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ignatz"], ["pet_type", "Iguana"], ["breed", "Axanthic"], ["age", 13], ["description", "Don't let his scaley hide fool you, he's a softy with a big heart"], ["user_id", 3], ["profile_picture", "http://www.clubfauna.com/wp-content/uploads/2014/03/Axanthic-or-Blue-Iguana.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Mortimer"], ["pet_type", "Dog"], ["breed", "Leonberger"], ["age", 6], ["description", "He may be the size of a small horse, but don't try riding him!"], ["user_id", 4], ["profile_picture", "http://www.101dogbreeds.com/wp-content/uploads/2015/03/Leonberger-Dog-Images.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dutchess Marigold"], ["pet_type", "Cat"], ["breed", "Exotic Shorthair Munchkin"], ["age", 2], ["description", "Her Majesty is eclipsed only by her love for fine tuna"], ["user_id", 5], ["profile_picture", "https://s-media-cache-ak0.pinimg.com/736x/69/24/2c/69242c315692a58ec88f117055bb2d5f.jpg"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "NightEyes"], ["pet_type", "Bird"], ["breed", "Northern Saw-Whet Owl"], ["age", 2], ["description", "Eyes with a heart to match"], ["user_id", 6], ["profile_picture", "http://farm4.staticflickr.com/3428/4003273528_d78e05f042_b.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Llester"], ["pet_type", "Camelid"], ["breed", "Llama"], ["age", 9], ["description", "A gentleman in the field, and a stud in the barn"], ["user_id", 7], ["profile_picture", "http://static.tumblr.com/eb425e2c1e76973ca009059689a67393/gtdnkhg/oUhmf7ptp/tumblr_static_hipster-llama-l.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Quentin"], ["pet_type", "Arachnid"], ["breed", "Mexican Red-Knee Tarantula"], ["age", 3], ["description", "A barely persceptible touch, and hair soft as a gentle evenings breeze"], ["user_id", 8], ["profile_picture", "http://www.tarantulaheaven.com/wp-content/uploads/2015/06/7670adc2-698f-4b5d-934d-973a77395d56.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Moopy"], ["pet_type", "Dog"], ["breed", "Chinese Crested"], ["age", 8], ["description", "He's an inbred idiot... but he's MY inbred idiot!"], ["user_id", 9], ["profile_picture", "http://www.canisite.com/wp-content/uploads/ch/chinese-tenugliestanimalsont-breed.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "RoadRunner"], ["pet_type", "Sloth"], ["breed", "Pygmy Three-Toed"], ["age", 2], ["description", "Don't mind the colony of insects bred in his hair, it just shows how supportive he is ;)"], ["user_id", 10], ["profile_picture", "https://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Three-toed-Sloth-photo.jpg"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sonic"], ["pet_type", "Tortoise"], ["breed", "Leopard"], ["age", 18], ["description", "A hard outer shell, with a soft gooey centre..."], ["user_id", 11], ["profile_picture", "https://i.ytimg.com/vi/BZnHsj3Y0Fk/maxresdefault.jpg"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:31:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 63ms (Views: 12.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:47:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 64ms (Views: 13.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:47:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:47:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:47:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:47:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:48:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:48:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.6ms)
+
+

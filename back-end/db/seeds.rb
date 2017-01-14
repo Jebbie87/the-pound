@@ -178,7 +178,7 @@ Pet.create!({
   age: 3,
   description: "A barely persceptible touch, and hair soft as a gentle evenings breeze",
   user_id: u8.id,
-  profile_picture: "http://www.tarantulaheaven.com/wp-content/uploads/2015/06/7670adc2-698f-4b5d-934d-973a77395d56.jpg"
+  profile_picture: "http://insidiousclothing.com/lolspiders/wp-content/uploads/2011/11/memes-hipster-spider.jpg"
   })
 
 Pet.create!({

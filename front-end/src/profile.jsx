@@ -5,12 +5,11 @@ class Profile extends Component {
     return (
 
       <div>
-        (ProfilePic...)
-        <h2> Name: Max </h2>
-        <p> Type: Dog </p>
-        <p> Age: 3 </p>
-        <p> Introduction/blurb: A cockerspaniel with an attitude... loves kibbles and bits </p>
-        (Additional pictures...)
+        <img className="profile-pic-big" src={this.props.pet.profile_picture}/>
+
+        <h2> Name: Max/ {this.props.pet.name} </h2>
+        <p> Type: Dog/ {this.props.pet.type} | Age: 3/ {this.props.pet.age}</p>
+        <p> Introduction: A cockerspaniel with an attitude... loves kibbles and bits/ {this.props.pet.description} </p>
 
       </div>
 

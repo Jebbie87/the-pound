@@ -43,6 +43,7 @@ class App extends Component {
             })
           }
 
+          {/* Individual profiles you get from clicking on them */}
           <Profile
             pet={this.state.pet}
           />

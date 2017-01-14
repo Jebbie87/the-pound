@@ -96,7 +96,7 @@ u11 = User.create!({
 puts "<========== Users Complete!"
 # PURGE PETS
 puts "\n=========> purging PETS"
-Pets.destroy_all
+Pet.destroy_all
 puts "=====> done!"
 puts "=> Re-seeding Pets"
 # Create PETS TABLE Seeds

@@ -7,4 +7,5 @@ target 'The Pound' do
 
   # Pods for The Pound
 	pod 'Alamofire', '~> 4.0'
+	pod 'AlamofireImage', '~> 3.1'
 end

@@ -8,21 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1DE8E0EF1E2A8C6E009B2213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8E0EE1E2A8C6E009B2213 /* AppDelegate.swift */; };
-		1DE8E0F11E2A8C6E009B2213 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8E0F01E2A8C6E009B2213 /* ViewController.swift */; };
 		1DE8E0F41E2A8C6E009B2213 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE8E0F21E2A8C6E009B2213 /* Main.storyboard */; };
 		1DE8E0F61E2A8C6F009B2213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE8E0F51E2A8C6F009B2213 /* Assets.xcassets */; };
 		1DE8E0F91E2A8C6F009B2213 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE8E0F71E2A8C6F009B2213 /* LaunchScreen.storyboard */; };
+		1DE8E1011E2A9B53009B2213 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8E1001E2A9B53009B2213 /* HomePageViewController.swift */; };
+		1DE8E1031E2AA24B009B2213 /* HomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8E1021E2AA24B009B2213 /* HomePageTableViewCell.swift */; };
+		1DE8E1051E2AA9B7009B2213 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8E1041E2AA9B7009B2213 /* User.swift */; };
+		1DE8E1071E2AA9D0009B2213 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8E1061E2AA9D0009B2213 /* Pet.swift */; };
+		1DE8E10B1E2AB823009B2213 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8E10A1E2AB823009B2213 /* ProfileViewController.swift */; };
 		297C933BF2C875DB3B96866D /* Pods_The_Pound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2452C4B6DBF59A604B75619 /* Pods_The_Pound.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DE8E0EB1E2A8C6E009B2213 /* The Pound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Pound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE8E0EE1E2A8C6E009B2213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1DE8E0F01E2A8C6E009B2213 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DE8E0F31E2A8C6E009B2213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DE8E0F51E2A8C6F009B2213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DE8E0F81E2A8C6F009B2213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DE8E0FA1E2A8C6F009B2213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE8E1001E2A9B53009B2213 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		1DE8E1021E2AA24B009B2213 /* HomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageTableViewCell.swift; sourceTree = "<group>"; };
+		1DE8E1041E2AA9B7009B2213 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1DE8E1061E2AA9D0009B2213 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		1DE8E10A1E2AB823009B2213 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		414179CBC9D97E7522CEF7C6 /* Pods-The Pound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Pound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Pound/Pods-The Pound.debug.xcconfig"; sourceTree = "<group>"; };
 		B2452C4B6DBF59A604B75619 /* Pods_The_Pound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Pound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB633BB958FB6BAC5B118E2C /* Pods-The Pound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Pound.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Pound/Pods-The Pound.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,9 +69,13 @@
 		1DE8E0ED1E2A8C6E009B2213 /* The Pound */ = {
 			isa = PBXGroup;
 			children = (
-				1DE8E0EE1E2A8C6E009B2213 /* AppDelegate.swift */,
-				1DE8E0F01E2A8C6E009B2213 /* ViewController.swift */,
 				1DE8E0F21E2A8C6E009B2213 /* Main.storyboard */,
+				1DE8E0EE1E2A8C6E009B2213 /* AppDelegate.swift */,
+				1DE8E10A1E2AB823009B2213 /* ProfileViewController.swift */,
+				1DE8E1001E2A9B53009B2213 /* HomePageViewController.swift */,
+				1DE8E1021E2AA24B009B2213 /* HomePageTableViewCell.swift */,
+				1DE8E1041E2AA9B7009B2213 /* User.swift */,
+				1DE8E1061E2AA9D0009B2213 /* Pet.swift */,
 				1DE8E0F51E2A8C6F009B2213 /* Assets.xcassets */,
 				1DE8E0F71E2A8C6F009B2213 /* LaunchScreen.storyboard */,
 				1DE8E0FA1E2A8C6F009B2213 /* Info.plist */,
@@ -212,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DE8E0F11E2A8C6E009B2213 /* ViewController.swift in Sources */,
+				1DE8E1071E2AA9D0009B2213 /* Pet.swift in Sources */,
+				1DE8E1051E2AA9B7009B2213 /* User.swift in Sources */,
 				1DE8E0EF1E2A8C6E009B2213 /* AppDelegate.swift in Sources */,
+				1DE8E1031E2AA24B009B2213 /* HomePageTableViewCell.swift in Sources */,
+				1DE8E10B1E2AB823009B2213 /* ProfileViewController.swift in Sources */,
+				1DE8E1011E2A9B53009B2213 /* HomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +395,7 @@
 				1DE8E0FF1E2A8C6F009B2213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

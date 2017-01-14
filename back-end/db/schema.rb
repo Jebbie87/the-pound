@@ -15,6 +15,16 @@ ActiveRecord::Schema.define(version: 20170114175700) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "pets", force: :cascade do |t|
+    t.string  "name"
+    t.string  "type"
+    t.string  "breed"
+    t.integer "age"
+    t.text    "description"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_pets_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"

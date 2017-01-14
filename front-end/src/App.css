@@ -21,8 +21,7 @@
 }
 
 #tagline{
-  /*font-family*/
-  /*font-family: 'Boogaloo', cursive;*/
+  font-family: 'Caveat Brush', cursive;
 }
 
 .profile-box{
@@ -71,7 +70,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1em;
+  font-size: .8em;
   margin: 4px 2px;
   cursor: pointer;
   box-shadow: 4px 0px 25px 5px rgba(0, 0, 0, 0.2);

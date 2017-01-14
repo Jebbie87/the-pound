@@ -32,6 +32,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo"/>
           <h2>Welcome to The Pound</h2>
           <p id="tagline">If you can't love my pet, you don't stand a chance with me!</p>
+          <br/>
+          <br/>
+          <br/>
         </div>
 
         <div>

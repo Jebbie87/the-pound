@@ -34,7 +34,7 @@ class App extends Component {
           <p>Because if you can't love my pet, you don't stand a chance with me!</p>
         </div>
 
-        <div className="App-body">
+        <div>
           <div className="pics-container">
             {/* This gets all the pets */}
             {this.state.pets.map((pet, index) => {
@@ -42,7 +42,7 @@ class App extends Component {
                 <ProfilePic
                   pet={pet}
                   setPet={this.setCurrentPet}
-                  key={index}  
+                  key={index}
                 />)
             })
             }

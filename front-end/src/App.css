@@ -15,10 +15,6 @@
   color: white;
 }
 
-.App-body {
-  /*font-size: large;*/
-}
-
 /*change this to make it spin faster on hover*/
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -29,36 +25,51 @@
   display: table;
   padding: 3em;
   text-align: left;
-  border: 1px solid black;
+  border: 1px solid grey;
   border-radius: 20px;
   margin: 2em;
   background: rgb(181, 250, 221);
-  font-size: 200%
+  font-size: 190%;
+  min-width: 40em;
 }
 
 .profile-pic{
   margin: 1em;
-  width: 14em;
+  width: 16em;
   height: 14em;
   border: 1px solid grey;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .pics-container{
   /*position: absolute;*/
   padding: 2em;
   display: flex;
-  height: 15em;
-  width: 80em;
+  height: 17em;
+  width: 90%;
   overflow-x: scroll;
-  border: 1px solid black;
-  margin:
+  border: 1px solid grey;
+  border-radius: 12px;
+  margin: 3em;
 }
 
 .profile-pic-big{
-  width: 12em;
-  height: 12em;
+  width: 18em;
+  height: 18em;
   float: right;
   margin: 1em;
+}
 
+.button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 4px 0px 15px 2px rgba(0, 0, 0, 0.2);
 }

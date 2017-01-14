@@ -13,6 +13,9 @@ class Profile extends Component {
         <p> <strong>Age:</strong> {this.props.pet.age}</p>
         <p> <strong>Introduction:</strong> {this.props.pet.description} </p>
 
+        <button className="button">Converse with this pet's owner</button>
+
+
       </div>
 
     )

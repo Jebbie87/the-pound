@@ -6,7 +6,7 @@ class Profile extends Component {
     return (
 
       <div className="profile-box">
-        <img className="profile-pic-big" src={this.props.pet.profile_picture}/>
+        <img role="presentation" className="profile-pic-big" src={this.props.pet.profile_picture}/>
 
         <h2> {this.props.pet.name} </h2>
         <p> <strong>Type:</strong> {this.props.pet.pet_type}</p>

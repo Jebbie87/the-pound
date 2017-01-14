@@ -8,7 +8,6 @@
 }
 
 .App-header {
-  /*font-family: 'Boogaloo', cursive;*/
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -21,12 +20,9 @@
   to { transform: rotate(1000deg); }
 }
 
-.hidden {
-   display:none;
-}
-
-.show{
-   display:block;
+#tagline{
+  /*font-family*/
+  /*font-family: 'Boogaloo', cursive;*/
 }
 
 .profile-box{
@@ -50,7 +46,6 @@
 }
 
 .pics-container{
-  /*position: absolute;*/
   padding: 2em;
   display: flex;
   height: 17em;
@@ -79,5 +74,5 @@
   font-size: 1em;
   margin: 4px 2px;
   cursor: pointer;
-  box-shadow: 4px 0px 15px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 0px 25px 5px rgba(0, 0, 0, 0.2);
 }

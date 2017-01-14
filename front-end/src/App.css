@@ -15,10 +15,10 @@
 }
 
 h1{
-  font-family: 'Margarine', cursive;
+  font-family: 'Poller One', cursive;
   font-size: 500%;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 /*change this to make it spin faster on hover*/

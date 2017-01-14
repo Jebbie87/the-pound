@@ -49,9 +49,11 @@ class App extends Component {
           </div>
         </div>
           {/* Individual profiles you get from clicking on them */}
+        <div className="hidden">
           <Profile
             pet={this.state.pet}
           />
+        </div>
       </div>
     );
   }

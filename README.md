@@ -10,6 +10,6 @@ Using a React front-end and a Rails back-end (serving as API) for an iOS compone
 Built over the course of ... 4hrs?
 
 
-**Premise:** 
-A dating site where all romantic choices are made based on compability with someones pet. 
+**Premise:**
+A dating site where all romantic choices are made based on compatibility with someone's pet.
 No humans allowed, pet pictures only.

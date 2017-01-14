@@ -9,9 +9,16 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  /*height: 150px;*/
+  padding: 10px;
   color: white;
+}
+
+h1{
+  font: 'Margarine', cursive;
+  font-size: 500%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*change this to make it spin faster on hover*/
@@ -22,6 +29,9 @@
 
 #tagline{
   font-family: 'Caveat Brush', cursive;
+  font-size: 240%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .profile-box{

@@ -1474,3 +1474,40 @@ FOREIGN KEY ("pet_id")
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("name", "pet_type", "breed", "age", "description", "user_id", "profile_picture") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sonic"], ["pet_type", "Tortoise"], ["breed", "Leopard"], ["age", 18], ["description", "A hard outer shell, with a soft gooey centre..."], ["user_id", 11], ["profile_picture", "https://i.ytimg.com/vi/BZnHsj3Y0Fk/maxresdefault.jpg"]]
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:39:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 68ms (Views: 10.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:39:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 67ms (Views: 11.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:40:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (1.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:40:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pets" for 10.0.2.2 at 2017-01-14 20:40:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+

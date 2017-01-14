@@ -11,7 +11,11 @@ class ProfilePic extends Component {
 
   render() {
     return (
-      <img className="profile-pic" src={this.props.pet} onClick={this.getPetData}/>
+      <img
+        className="profile-pic"
+        src={this.props.pet.profile_picture}
+        onClick={this.getPetData}
+      />
     )
   }
 }

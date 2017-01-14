@@ -103,7 +103,7 @@ puts "=> Re-seeding Pets"
 
 Pet.create!({
   name: "Reginald",
-  type: "Dog",
+  pet_type: "Dog",
   breed: "Bullshit",
   age: 3,
   description: "A wily little scamp with a love for sniffing butts",
@@ -113,7 +113,7 @@ Pet.create!({
 
 Pet.create!({
   name: "Colonel Buttons III, Esquire",
-  type: "Cat",
+  pet_type: "Cat",
   breed: "Persian",
   age: 8,
   description: "A most majestic military commander who has served their country with distinction",
@@ -123,7 +123,7 @@ Pet.create!({
 
 Pet.create!({
   name: "Ignatz",
-  type: "Iguana",
+  pet_type: "Iguana",
   breed: "Axanthic",
   age: 13,
   description: "Don't let his scaley hide fool you, he's a softy with a big heart",
@@ -133,7 +133,7 @@ Pet.create!({
 
 Pet.create!({
   name: "Mortimer",
-  type: "Dog",
+  pet_type: "Dog",
   breed: "Leonberger",
   age: 6,
   description: "He may be the size of a small horse, but don't try riding him!",
@@ -143,7 +143,7 @@ Pet.create!({
 
 Pet.create!({
   name: "The Dutchess Marigold",
-  type: "Cat",
+  pet_type: "Cat",
   breed: "Exotic Shorthair Munchkin",
   age: 2,
   description: "Her Majesty is eclipsed only by her love for fine tuna",
@@ -153,7 +153,7 @@ Pet.create!({
 
 Pet.create!({
   name: "NightEyes",
-  type: "Bird",
+  pet_type: "Bird",
   breed: "Northern Saw-Whet Owl",
   age: 2,
   description: "Eyes with a heart to match",
@@ -163,7 +163,7 @@ Pet.create!({
 
 Pet.create!({
   name: "Llester",
-  type: "Camelid",
+  pet_type: "Camelid",
   breed: "Llama",
   age: 9,
   description: "A gentleman in the field, and a stud in the barn",
@@ -173,7 +173,7 @@ Pet.create!({
 
 Pet.create!({
   name: "Quentin",
-  type: "Arachnid",
+  pet_type: "Arachnid",
   breed: "Mexican Red-Knee Tarantula",
   age: 3,
   description: "A barely persceptible touch, and hair soft as a gentle evenings breeze",
@@ -183,7 +183,7 @@ Pet.create!({
 
 Pet.create!({
   name: "Moopy",
-  type: "Dog",
+  pet_type: "Dog",
   breed: "Chinese Crested",
   age: 8,
   description: "He's an inbred idiot... but he's MY inbred idiot!",
@@ -193,7 +193,7 @@ Pet.create!({
 
 Pet.create!({
   name: "RoadRunner",
-  type: "Sloth",
+  pet_type: "Sloth",
   breed: "Pygmy Three-Toed",
   age: 2,
   description: "Don't mind the colony of insects bred in his hair, it just shows how supportive he is ;)",
@@ -203,7 +203,7 @@ Pet.create!({
 
 Pet.create!({
   name: "Sonic",
-  type: "Tortoise",
+  pet_type: "Tortoise",
   breed: "Leopard",
   age: 18,
   description: "A hard outer shell, with a soft gooey centre...",

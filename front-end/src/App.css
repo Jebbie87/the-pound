@@ -27,15 +27,25 @@
   to { transform: rotate(1000deg); }
 }
 
+.profile-box{
+  padding: 3em;
+  text-align: left;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 2em;
+  background: rgba(10, 214, 141, 0.26);
+
+}
+
 .profile-pic{
   margin: 1em;
   width: 12em;
   height: 14em;
   border: 1px solid black;
   border-radius: 5px;
-
 }
 
 .profile-pic-big{
   size: 200%;
+  float: right;
 }

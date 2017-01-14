@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 
 class ProfilePic extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   getPetData = () => {
     this.props.setPet(this.props.pet)

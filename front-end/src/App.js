@@ -14,7 +14,8 @@ class App extends Component {
 
   componentWillMount() {
     axios.get('http://0.0.0.0:3000/pets').then((response) => {
-      this.props.updateToSearchResults(response.data)
+      console.log(response);
+      this.setState({pets: response.data})
     }).catch((error) => {
       console.log(error)
     })

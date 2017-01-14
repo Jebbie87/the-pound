@@ -2,8 +2,28 @@ import React, {Component} from 'react';
 import logo from '../public/favicon.ico';
 import './App.css';
 import ProfilePic from './profile-pic.jsx';
+import Profile from './profile.jsx';
+import axios from 'axios';
 
 class App extends Component {
+
+  state = {
+    pets: [],
+    pet: ""
+  }
+
+  componentWillMount() {
+    axios.get('http://0.0.0.0:3000/pets').then((response) => {
+      this.props.updateToSearchResults(response.data)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
+  setCurrentPet = (pet) => {
+    this.setState({pet: pet})
+  }
+
   render() {
     return (
       <div className="App">
@@ -14,15 +34,18 @@ class App extends Component {
 
         <div className="App-body">
 
-          <ProfilePic/>
-          <ProfilePic/>
-          <ProfilePic/>
-          <ProfilePic/>
+          {/* This gets all the pets */}
+          {this.state.pets.map((pet, index) => {
+            return (<ProfilePic
+            pet={pet}
+            setPet={this.setCurrentPet}
+            />)
+            })
+          }
 
-          <ProfilePic/>
-          <ProfilePic/>
-          <ProfilePic/>
-          <ProfilePic/>
+          <Profile
+            pet={this.state.pet}
+          />
 
         </div>
       </div>

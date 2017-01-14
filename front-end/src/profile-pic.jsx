@@ -5,9 +5,13 @@ class ProfilePic extends Component {
     super(props)
   }
 
+  getPetData = () => {
+    this.props.setPet(this.props.pet)
+  }
+
   render() {
     return (
-      <img className="profile-pic" src="https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/dog.png"/>
+      <img className="profile-pic" src={this.props.pet} onClick={this.getPetData}/>
     )
   }
 }
